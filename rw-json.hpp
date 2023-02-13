@@ -1083,7 +1083,7 @@ public:
         return !_Error.has_value();
     }
 
-    const std::exception& error(void) const noexcept {
+    const std::exception& error(void) const {
         return _Error.value();
     }
 
@@ -1138,7 +1138,7 @@ public:
         return !_Error.has_value();
     }
 
-    const std::exception& error(void) const noexcept {
+    const std::exception& error(void) const {
         return _Error.value();
     }
 
