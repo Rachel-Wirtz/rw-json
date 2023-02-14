@@ -1,4 +1,4 @@
-# rw-json [![GitHub](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://github.com/Rachel-Wirtz/rw-json/blob/latest/LICENSE) [![GitHub](https://img.shields.io/badge/Version-0.1.0-blue?style=flat-square)](https://github.com/Rachel-Wirtz/rw-json)
+# rw-json [![GitHub](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://github.com/Rachel-Wirtz/rw-json/blob/latest/LICENSE) [![GitHub](https://img.shields.io/badge/Version-0.1.1-blue?style=flat-square)](https://github.com/Rachel-Wirtz/rw-json)
 
 JSON in 2023, not only because of the growing number of web based applications, is one of the most common text based serialization formats used. Languages such as Python, C# (.NET), obviously Javascript and many others support it natively.
 
