@@ -911,10 +911,15 @@ public:
             throw std::exception("unexpected token encountered, expected <[>");
         }
 
-        do {
-            this->operator()(is, _Temp.emplace_back().get());
+        if (is.peek() != Char(']')) {
+            do {
+                this->operator()(is, _Temp.emplace_back().get());
+                this->validate(is >> c);
+            } while (c == Char(','));
+        }
+        else {
             this->validate(is >> c);
-        } while (c == Char(','));
+        }
 
         if (c != Char(']')) {
             throw std::exception("unexpected token encountered, expected <,> or <]>");
@@ -935,19 +940,24 @@ public:
             throw std::exception("unexpected token encountered, expected <{>");
         }
 
-        do {
-            std::basic_string<Char, Traits, Allocator> _Key{};
-            this->validate(is >> std::quoted(_Key));
+        if (is.peek() != Char('}')) {
+            do {
+                std::basic_string<Char, Traits, Allocator> _Key{};
+                this->validate(is >> std::quoted(_Key));
 
+                this->validate(is >> c);
+                if (c != Char(':')) {
+                    throw std::exception("unexpected token encountered, expected <:>");
+                }
+
+                this->operator()(is, _Temp[std::move(_Key)].get());
+
+                this->validate(is >> c);
+            } while (c == Char(','));
+        }
+        else {
             this->validate(is >> c);
-            if (c != Char(':')) {
-                throw std::exception("unexpected token encountered, expected <:>");
-            }
-
-            this->operator()(is, _Temp[std::move(_Key)].get());
-
-            this->validate(is >> c);
-        } while (c == Char(','));
+        }
 
         if (c != Char('}')) {
             throw std::exception("unexpected token encountered, expected <,> or <}>");
