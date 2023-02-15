@@ -11,7 +11,7 @@
     #endif
 #endif
 
-#include <iostream>       // For basic_i|o|iostram  | used by: json::reader, json::writer, json::serializer, json::deserializer
+#include <iostream>       // For basic_i|o|stream   | used by: json::reader, json::writer, json::serializer, json::deserializer
 #include <vector>         // For vector             | used by: json::array
 #include <unordered_map>  // For unordered_map      | used by: json::object
 #include <variant>        // For variant            | used by: json::variant
