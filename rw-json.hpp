@@ -14,11 +14,11 @@
 #include <iostream>       // For basic_i|o|stream   | used by: json::reader, json::writer, json::serializer, json::deserializer
 #include <vector>         // For vector             | used by: json::array
 #include <unordered_map>  // For unordered_map      | used by: json::object
-#include <variant>        // For variant            | used by: json::variant
+#include <variant>        // For variant            | used by: json::value
 #include <iomanip>        // For quoted             | used by: json::reader, json::writer, json::serializer, json::deserializer
 #include <optional>       // For optional           | used by: json::serialize, json::deserialize
 #include <sstream>        // For i|o|stringstream   | used by: json::reader, json::writer, json::serializer, json::deserializer
-#include <memory>         // For smart pointers     | used by: json::variant
+#include <memory>         // For smart pointers     | used by: extensions
 #include <array>          // For array              | used by: json::array
 
 #ifndef RW_NAMESPACE
