@@ -4,15 +4,6 @@ JSON in 2023, not only because of the growing number of web based applications, 
 
 <br>
 
-## What you get and what we keep working on
-
-In its current version, rw-json provides already a fully working library for serialization and deserialization to and from JSON. However, we have some drawbacks to solve still.
-
-* Currently values are copied into internal memory which clearly causes a memory overhead. To solve this we are working on an extension which allows binding of values to pointers which are then used instead for serialization. This is intended to work like `std::string_view` for example.
-* The library provides template spezializations for `char8_t`, `char16_t` and `char32_t` character types, but doesn't set locales by itself. Therefor the stream based serialization in many cases might not work out of the box for character types other than `char` and `wchar_t`.
-
-<br>
-
 ## How does it work?
 
 rw-json is a single header file library. Even tho it is currently not longer than 1250 lines, the code is a bit messy to read by nature.
