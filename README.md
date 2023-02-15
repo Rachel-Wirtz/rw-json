@@ -6,8 +6,7 @@ JSON in 2023, not only because of the growing number of web based applications, 
 
 ## How does it work?
 
-rw-json is a single header file library. Even tho it is currently not longer than 1600 lines, the code is a bit messy to read by nature.
-Therefor a quick start guide you find [here](https://github.com/Rachel-Wirtz/rw-json/wiki/Quick-Start) and a documentation explaining the entire public API for the current version is available as well [here](https://github.com/Rachel-Wirtz/rw-json/wiki/rw::json).
+rw-json is a single header file library. A quick start guide you find [here](https://github.com/Rachel-Wirtz/rw-json/wiki/Quick-Start) and a documentation explaining the entire public API for the current version is available as well [here](https://github.com/Rachel-Wirtz/rw-json/wiki/rw::json).
 
 <br>
 
