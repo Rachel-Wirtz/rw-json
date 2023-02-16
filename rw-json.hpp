@@ -22,9 +22,9 @@
 #include <array>          // For array              | used by: json::array
 
 #ifndef RW_NAMESPACE
-#define RW_NAMESPACE                rw
-#define RW_NAMESPACE_BEGIN          namespace RW_NAMESPACE {
-#define RW_NAMESPACE_END            }
+    #define RW_NAMESPACE                rw
+    #define RW_NAMESPACE_BEGIN          namespace RW_NAMESPACE {
+    #define RW_NAMESPACE_END            }
 #endif
 
 #define RW_JSON_NAMESPACE           json
